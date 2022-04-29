@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+int main() {
+  srand(time(0));
+  int hidden=rand()%100+1;
+  int num_of_guesses=1;
+  cout<<"hidden "<<hidden<<endl;
+  while(num_of_guesses<10){
+      int guess;
+      cin>>guess;
+      if(guess==hidden){
+          cout<<"you win"<<endl;
+          return 0;
+      }
+      else if(guess>hidden){
+          cout<<"guess smaller"<<endl;
+      }
+      else{
+          cout<<"guess bigger"<<endl;
+      }
+   num_of_guesses++;
+  }
+     if(num_of_guesses==10){
+          cout<<"you failed"<<endl;
+      }
+    return 0;
+}
+
+
+Input & Output
+
+hidden 81
+2
+guess bigger
+3
+guess bigger
+82
+guess smaller
+5
+guess bigger
+6
+guess bigger
+7
+guess bigger
+8
+guess bigger
+9
+guess bigger
+10
+guess bigger
+11
+guess bigger
+you failed
