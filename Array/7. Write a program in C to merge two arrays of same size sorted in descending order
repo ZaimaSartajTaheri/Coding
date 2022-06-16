@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input the number of elements to be stored in the first array : ");
+    scanf( "%d",&n);
+    printf("Input %d elements in the array :",n);
+    printf("\n");
+    int arr[n];
+    
+    for(int i=0;i<n;i++){
+        printf("element - %d: ",i);
+        scanf("%d",&arr[i]);
+    }
+    printf("Input the number of elements to be stored in the second array : ");
+    scanf( "%d",&n);
+    printf("Input %d elements in the array :",n);
+    printf("\n");
+    int arr1[n];
+    
+    for(int i=0;i<n;i++){
+        printf("element - %d: ",i);
+        scanf("%d",&arr1[i]);
+    }
+    int m=n+n;
+    int arrf[m];
+    int i=0;
+    for( i=0;i<n;i++){
+        arrf[i]=arr[i];
+    }
+    for(int j=0;j<n;j++){
+        arrf[i]=arr1[j];
+        i++;
+    }
+    int t=0;
+    printf("The merged array in decending order is :\n");
+    for(int k=0;k<m;k++){
+        for(int l=k+1;l<m;l++){
+        if(arrf[k]<=arrf[l]){
+            t=arrf[l];
+            arrf[l]=arrf[k];
+            arrf[k]=t;
+        }
+        }
+    }
+        
+       
+    
+    for(int k=0;k<m;k++){
+       
+        printf("%d ",arrf[k]);
+    }
+   
+    return 0;
+}
