@@ -16,7 +16,7 @@ int main()
    
     
     int t=0;
-    printf("Elements of the array in sorted descending order:\n");
+    printf("Elements of array in sorted ascending order:\n");
     for(int k=0;k<n;k++){
         for(int l=k+1;l<n;l++){
         if(arr[k]>=arr[l]){
