@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int main()
+{ int l,m,n,o;
+     printf("Input the rows and columns of first matrix : ");
+    scanf("%d %d",&l,&m);
+     printf("Input the rows and columns of second matrix : ");
+    scanf("%d %d",&n,&o);
+    int arr[l][m];
+    int arr1[n][o];
+    int arrf[l][o];
+    printf("Input elements in the first matrix :\n");
+    for(int i=0;i<l;i++){
+        for(int j=0;j<m;j++){
+        printf("element - [%d],[%d]: ",i,j);
+        scanf("%d",&arr[i][j]);
+    }
+    }
+    printf("\nInput elements in the second matrix :\n"); 
+    for(int i=0;i<n;i++){
+        for(int j=0;j<o;j++){
+        printf("element - [%d],[%d]: ",i,j);
+        scanf("%d",&arr1[i][j]);
+    }
+    }
+    printf("The First matrix is :\n");
+     for(int i=0;i<l;i++){
+        for(int j=0;j<m;j++){
+        
+        printf("%d ",arr[i][j]);
+    }
+    printf("\n");
+     }
+     
+     printf("The Second matrix is :\n");
+     for(int i=0;i<n;i++){
+        for(int j=0;j<o;j++){
+        
+        printf("%d ",arr1[i][j]);
+    }
+    printf("\n");
+     }
+     int sum=0;
+     if(m==n){
+     printf("The multiplication of two matrix is :\n");
+     for(int i=0;i<l;i++){
+        for(int j=0;j<o;j++){
+            sum=0;
+        for(int k=0;k<n;k++){
+            sum+=arr[i][k]*arr1[k][j];
+            arrf[i][j]=sum; 
+        }
+       
+    }
+    
+     }
+     for(int i=0;i<l;i++){
+        for(int j=0;j<o;j++){
+        
+        printf("%d ",arrf[i][j]);
+    }
+    printf("\n");
+     }
+     }
+   
+    return 0;
+}
