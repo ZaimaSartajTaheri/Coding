@@ -1,0 +1,16 @@
+#include <stdio.h>
+void makeitEqualToAvg(int *pa,int *pb){
+    int avg=(*pa+*pb)/2;
+    *pa=avg, *pb=avg;
+    
+}
+int main() {
+  int a,b;
+  scanf("%d %d",&a,&b);
+  makeitEqualToAvg(&a,&b);
+  printf("a = %d b = %d",a,b);
+    
+    return 0;
+}
+
+/** when there is two values to be changed process of return can not be useed. pointers are neeeded to use*/
