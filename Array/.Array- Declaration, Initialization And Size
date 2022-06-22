@@ -12,3 +12,6 @@ int main() {
     
     return 0;
 }
+
+
+//*(a+2) and a[2] is same thing
