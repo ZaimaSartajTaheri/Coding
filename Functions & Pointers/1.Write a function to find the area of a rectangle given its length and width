@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+float area(int l, int w){
+  float area=l*w;
+  return area;
+}
+int main() {
+    // Write C code here
+   int l,w;
+   scanf("%d %d",&l,&w);
+   float a=area(l,w);
+   printf("%f",a);
+    return 0;
+}
