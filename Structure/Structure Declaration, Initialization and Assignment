@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include<string.h>
+struct Date{
+    int day;
+    int month;
+    int year;
+};
+int main() {
+   
+   struct Date today={28,5,2022};
+   
+  
+//   today=(struct Date) {1,1,2000};
+//today=(struct Date) {1,1,2000,1553};
+today=(struct Date) {1,1};
+   printf("%d-%d-%d",today.day,today.month,today.year);
+   
+  
+    return 0;
+}
