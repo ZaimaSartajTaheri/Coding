@@ -17,3 +17,12 @@ int main() {
     
     return 0;
 }
+
+Input:
+I am a programmer
+a
+
+Output:
+Found at 2
+Found at 5
+Found at 12
