@@ -1,0 +1,27 @@
+#include <stdio.h>
+ 
+typedef struct {
+    int number[100];
+    double root[100];
+} squareRoot;
+ 
+int main ()
+{
+    int i =0;
+    squareRoot squareRoot1;
+ 
+    // setting data
+    for (i =0; i<=100; i++){
+ 
+        squareRoot1.number[i] = i;
+        squareRoot1.root[i] = sqrt(i);
+    }
+    // printing data
+ 
+    for (i =0; i<=100; i++){
+        printf( "Square Root of %d ", squareRoot1.number[i]);
+        printf( "is : %f\n", squareRoot1.root[i]);
+    }
+ 
+    return 0;
+}
