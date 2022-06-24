@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include<string.h>
+void strrev(char str[]){
+     int len=strlen(str);
+    int temp;
+  for (int i = 0; i < len/2; i++)  
+    {  
+        // temp variable use to temporary hold the string  
+        temp = str[i];  
+        str[i] = str[len - i - 1];  
+        str[len - i - 1] = temp;  
+    }  
+}
+void toBinary(unsigned int val,char str[],int k){
+    int idx=0;
+    while(val>0){
+        int d=val%2;
+        val=val/2;
+        str[idx]='0'+d;
+        idx++;
+    }
+    str[idx]='\0';
+//    
+  for(int i=idx;i<k;i++) str[i]='0';
+  str[k]=0;
+  strrev(str);
+}
+int main() {
+unsigned int x=25;
+
+
+char sx[100],sy[100],sleft[100],sright[100];
+
+toBinary(x,sx,8);
+
+
+printf("sx=%s\n",sx);
+// printf("sy=%s\n",sy);
+
+int lx=x<<5;
+int rx=x>>1;
+
+// unsigned char lx=x<<2;
+// unsigned char rx=x>>2;
+
+
+toBinary(lx,sleft,8);
+toBinary(rx,sright,8);
+
+printf("lx=%d, %s\n",lx,sleft);
+printf("rx=%d, %s\n",rx,sright);
+
+
+    return 0;
+}
