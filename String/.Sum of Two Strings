@@ -40,7 +40,9 @@ int main() {
      j++;
      k++;
  }
- 
+ if(hate>0){
+     jogfol[k]=hate+'0';
+ }
  strrev(jogfol);
  printf("%s",jogfol);
     
