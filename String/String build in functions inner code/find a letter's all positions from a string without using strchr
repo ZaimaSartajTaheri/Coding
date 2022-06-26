@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+   
+    char text[100],pattern;
+ 
+   gets(text);
+   scanf("%c",&pattern);
+   for(int i=0; i<=strlen(text); i++)
+  	{
+  		if(text[i] == pattern)  
+		{
+  			printf("Found at Position %d\n ", i);
+ 		}
+	}
+    
+    return 0;
+}
+
+Input:
+I am a programmer
+a
+
+Output:
+Found at 2
+Found at 5
+Found at 12
