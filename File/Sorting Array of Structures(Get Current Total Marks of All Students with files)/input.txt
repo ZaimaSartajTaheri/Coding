@@ -1,0 +1,5 @@
+4
+rakin 120 10
+sakin 121 20
+rakin 120 10
+asig 122 30
