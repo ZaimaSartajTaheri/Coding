@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main()
+{ int l,m,n,o;
+     printf("Input the rows and columns of first matrix : ");
+    scanf("%d %d",&l,&m);
+     printf("Input the rows and columns of second matrix : ");
+    scanf("%d %d",&n,&o);
+    int arr[l][m];
+    int arr1[n][o];
+   
+    printf("Input elements in the first matrix :\n");
+    for(int i=0;i<l;i++){
+        for(int j=0;j<m;j++){
+        printf("element - [%d],[%d]: ",i,j);
+        scanf("%d",&arr[i][j]);
+    }
+    }
+    printf("\nInput elements in the second matrix :\n"); 
+    for(int i=0;i<n;i++){
+        for(int j=0;j<o;j++){
+        printf("element - [%d],[%d]: ",i,j);
+        scanf("%d",&arr1[i][j]);
+    }
+    }
+    printf("The First matrix is :\n");
+     for(int i=0;i<l;i++){
+        for(int j=0;j<m;j++){
+        
+        printf("%d ",arr[i][j]);
+    }
+    printf("\n");
+     }
+     
+     printf("The Second matrix is :\n");
+     for(int i=0;i<n;i++){
+        for(int j=0;j<o;j++){
+        
+        printf("%d ",arr1[i][j]);
+    }
+    printf("\n");
+     }
+     
+     int c=0;
+     printf("The Matrices can be compared :\n");
+     if(l==n && m==o){
+         for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+        
+        if(arr[i][j]==arr1[i][j]){
+            c++;
+        }
+    }
+    
+     } 
+     }
+     else{
+         printf("Two matrices are not equal.\n");
+         return 0;
+     }
+    
+     if(c==l*m){
+         printf("Two matrices are equal.\n");
+     }
+     else{
+          printf("Two matrices are not equal.\n");
+     }
+   
+    return 0;
+}
