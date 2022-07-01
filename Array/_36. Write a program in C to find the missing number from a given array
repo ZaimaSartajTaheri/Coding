@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input the number of elements to be stored in the array : ");
+    scanf( "%d",&n);
+    printf("Input %d elements in the array :",n);
+    printf("\n");
+    int arr[n];
+    
+    for(int i=0;i<n;i++){
+        printf("element - %d: ",i);
+        scanf("%d",&arr[i]);
+    }
+    int max=0;
+    for(int i=0;i<n;i++){
+        if(max<arr[i]){
+            max=arr[i];
+        }
+    }
+    int min=max;
+    for(int i=0;i<n;i++){
+        if(min>arr[i]){
+            min=arr[i];
+        }
+    }
+    // printf("%d\n",max);
+    // printf("%d\n",min);
+
+    printf("The missing number is : \n");
+
+   for(int i=min+1;i<max;i++){
+       for(int j=0;j<n;j++){
+        //   printf("arr[j]= %d \n",arr[j]);
+        //   printf("i= %d \n",i);
+              if(arr[j]==i){
+                // printf("%d ",i);
+                // printf("Yes");
+                break;
+          } 
+          else{
+              if(j==n-1){
+                   printf("%d ",i);
+                   break;
+              }
+          }
+         
+           
+       }
+   }
+  
+    return 0;
+}
