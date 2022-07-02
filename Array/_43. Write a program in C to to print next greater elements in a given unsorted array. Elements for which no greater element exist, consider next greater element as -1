@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[6];
+   printf("The given array is :\n");
+   int b[6];
+   for(int i=0;i<6;i++){
+       scanf("%d",&arr[i]);
+   }
+   printf("Next Bigger Elements are:\n");
+   for(int i=0;i<6;i++){
+       if(i==5){
+           printf("Next bigger element of %d in the array is: -1\n",arr[i]);
+           
+          b[i]=-1;
+           break;
+       }
+       for(int j=i+1;j<6;j++){
+        //   printf("arr[i], arr[j]= %d %d\n",arr[i],arr[j]);
+         if(arr[i]<arr[j]){
+               printf("Next bigger element of %d in the array is: %d\n",arr[i],arr[j]);
+               b[i]=arr[j];
+               break;
+           }
+           else{
+              if(j==6-1){
+                    printf("Next bigger element of %d in the array is: -1\n",arr[i]);
+                    b[i]=-1;
+                    break;
+               }
+           }
+       }
+   }
+   printf("\nNext Bigger Elements Array:\n");
+   for(int i=0;i<6;i++){
+       printf("%d ",b[i]);
+   }
+    return 0;
+}
