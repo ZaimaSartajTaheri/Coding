@@ -19,3 +19,5 @@ int main() {
    
     return 0;
 }
+
+//Given a sorted array in ascending order and a value x, the ceiling of x is the smallest element in array greater than or equal to x, and the floor is the greatest element smaller than or equal to x
