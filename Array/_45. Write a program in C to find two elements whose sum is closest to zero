@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main()
+{
+   int arr[10];
+   printf("The given array is :\n");
+   int b[6];
+   for(int i=0;i<10;i++){
+       scanf("%d",&arr[i]);
+   }
+   int min1=arr[0]+arr[1];
+   int min2=-100;
+   int min;
+   int l,m,n,o;
+   for(int i=0;i<9;i++){
+       for(int j=i+1;j<10;j++){
+           if(arr[i]+arr[j]>0){
+                //  printf("1st loop arr[i],arr[j] = %d %d \n",arr[i],arr[j]);
+                //  printf("(arr[i]+arr[j]) = %d \n",arr[i]+arr[j]);
+                if(min1>arr[i]+arr[j]){
+               min1=arr[i]+arr[j];
+            //   printf("arr[i],arr[j] = %d %d \n",arr[i],arr[j]);
+            l=i;
+            m=j;
+           }
+        //   printf("\n\n");
+           }
+           else if(arr[i]+arr[j]<=0){
+                // printf("2nd loop arr[i],arr[j] = %d %d \n",arr[i],arr[j]);
+                //  printf("(arr[i]+arr[j]) = %d \n",arr[i]+arr[j]);
+                   if(min2<arr[i]+arr[j]){
+               min2=arr[i]+arr[j];
+               n=i;
+               o=j;
+             
+           }
+            // printf("\n\n");
+           }
+            
+       }
+   }
+   printf("The Pair of elements whose sum is minimum are:\n");
+    // printf("min1 = %d\n",min1);
+    //          printf("min2 = %d\n",min2);
+           if(min1<=min2){
+               printf("[%d %d]",arr[l],arr[m]);
+        //   min=min1;
+           }
+          else{
+            //   min=min2;
+            printf("[%d %d]",arr[n],arr[o]);
+          }
+//   printf("min -  %d",min);
+    return 0;
+}
