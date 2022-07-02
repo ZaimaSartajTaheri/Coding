@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+   int a[8];
+   printf("The given array is :\n");
+   for(int i=0;i<8;i++){
+       scanf("%d",&a[i]);
+   }
+   int n;
+   scanf("%d",&n);
+   
+   printf("The ceiling of %d is :",n);
+    for(int i=0;i<8;i++){
+      if(a[i]>=n){
+          printf("%d",a[i]);
+          break;
+      }
+   }
+   
+    return 0;
+}
