@@ -1,0 +1,69 @@
+#Problem Statement:
+Takahashi loves numbers divisible by 22.
+
+You are given a positive integer NN. Among the integers between 11 and NN (inclusive), find the one that can be divisible by 22 for the most number of times. The solution is always unique.
+
+Here, the number of times an integer can be divisible by 22, is how many times the integer can be divided by 22 without remainder.
+
+For example,
+
+66 can be divided by 22 once: 66 -> 33.
+88 can be divided by 22 three times: 88 -> 44 -> 22 -> 11.
+33 can be divided by 22 zero times.
+
+#Code:
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+ int n;
+ cin>>n;
+ int c;
+ int m=0;
+ int o;
+ if(n==1){
+    //  cout<<"o"<<1<<endl;
+      cout<<1<<endl;
+    return 0; 
+ }
+ for(int i=1;i<=n;i++){
+    //   if(i%2==0){
+     c=0;
+    int v=i;
+        //   cout<<"value"<<i<<endl;
+          
+               
+        //   cout<<"rem "<<i%2<<endl;
+         while(v%2==0 && v/2!=0){
+           v=v/2;
+             c++;
+            //   cout<<"v"<<v<<endl;
+            //       cout<<"m"<<m<<endl;
+            //           cout<<"c"<<c<<endl;
+              
+              cout<<endl;
+              if(m<c){
+             m=c;
+             o=i;
+         }
+        //   cout<<"m"<<m<<endl;
+         }
+        //  m=c;
+           
+         
+             
+    //   }
+    //   cout<<"c"<<c<<endl;
+    //           cout<<endl;
+       
+ }
+//  cout<<"o"<<o<<endl;
+cout<<o<<endl;
+    return 0;
+}
+
+Input:
+7
+Output: 4
+4 can be divided by 22 twice, which is the most number of times among 11, 22, ..., 77.
