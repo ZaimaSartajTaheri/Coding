@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int row,col;
+   cin>>row>>col;
+   int a[row][col];
+   for(int i=0;i<row;i++){
+       for(int j=0;j<col;j++){
+           cin>>a[i][j];
+       }
+       cout<<endl;
+   }
+   if(row!=col){
+       cout<<"No"<<endl;
+       return 0;
+   }
+   int save;
+   for(int i=0;i<row;i++){
+       for(int j=0;j<col;j++){
+         if(i==j){
+             if(i==0 && j==0){
+                  save=a[i][j]; 
+             }
+             else{
+                 if(save!=a[i][j]){
+                     cout<<"Not identity"<<endl;
+                     return 0;
+                 }
+             }
+         
+         }
+        
+       }
+   }
+// cout<<"scalar"<<endl;
+// cout<<save<<endl;
+if(save==1){
+    cout<<"identity"<<endl;
+}
+else{
+    cout<<"Not identity"<<endl;
+}
+    return 0;
+}
