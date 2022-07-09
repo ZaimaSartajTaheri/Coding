@@ -1,0 +1,56 @@
+include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int n;
+  cin>>n;
+  int a[n];
+  for(int i=0;i<n;i++){
+      cin>>a[i];
+  }
+  int max=INT_MIN;
+  int sum1=0;
+  for(int i=0;i<n;i++){
+      sum1+=a[i];
+    //   cout<<"sum "<<sum1<<endl;
+      if(max<sum1){
+          max=sum1;
+      }
+      if(sum1<0){
+          sum1=0;
+      }
+  }
+ cout<<"max "<<max<<endl;
+  int min=INT_MAX;
+   int sum2=0;
+  for(int i=0;i<n;i++){
+      sum2+=a[i];
+      if(sum2<min){
+          min=sum2;
+      }
+      if(sum2>0){
+          sum2=0;
+      }
+  }
+  cout<<"min "<<min<<endl;
+ int fsum=0;
+ for(int i=0;i<n;i++){
+     fsum+=a[i];
+ }
+ cout<<"fsum "<<fsum<<endl;
+ int s1;
+ s1=fsum-min;
+ cout<<"s1 "<<s1<<endl;
+ int s2=std::max(s1,sum1);
+  cout<<"s2 "<<s2<<endl;
+ if(s1==0){
+     cout<<sum1<<endl;
+ }
+ else{
+     cout<<s2<<endl;
+ }
+    return 0;
+}
+
+The given array is : 10 8 -20 5 -3 -5 10 -13 11
+The maximum circular sum in the above array is: 29
