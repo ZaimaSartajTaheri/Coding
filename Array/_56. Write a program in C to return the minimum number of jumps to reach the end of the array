@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int a[14]={1 ,3, 5, 8, 9, 2, 6, 7, 6, 8, 9, 1, 1, 1};
+   int reachable=0;
+   int c=0;
+for(int i=0;i<14;){
+    if(reachable<i){
+        break;
+       
+    }
+    else{
+        
+        reachable=std::max(reachable,i+a[i]);
+        i=i+a[i];
+        if(reachable<14){
+        // cout<<"reachable"<< reachable<<endl;
+        c++; 
+        }
+        else{break;}
+       
+    }
+     
+}
+cout<<c<<endl;
+    return 0;
+}
