@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+ char c[100];
+gets(c);
+ int ca=0;
+ int cd=0;
+ int cs=0;
+ for(int i=0;c[i]!='\0';i++){
+     if((c[i]>='a' && c[i]<='z') || (c[i] >='A' && c[i]<='Z')){
+         printf("ca -> %c\n",c[i]);
+         ca++;
+     }
+     else if(c[i]>='0' && c[i]<='9'){
+          printf("cd -> %c\n",c[i]);
+         cd++;
+     }
+     else{
+          printf("cs -> %c\n",c[i]);
+         cs++;
+     }
+ }
+ printf("Number of Alphabets in the string is : %d\n",ca);
+ printf("Number of Digits in the string is : %d\n",cd);
+ printf("Number of Special characters in the string is :  %d\n",cs+1);
+    return 0;
+}
