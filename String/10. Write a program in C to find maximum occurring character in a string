@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+ char c[100];
+ char f[255];
+ printf("Input the string : ");
+gets(c);
+for(int i=0;i<255;i++){
+    f[i]=0;
+}
+int ascii;
+for(int i=0;c[i]!='\0';i++){
+ascii=(int) c[i];
+f[ascii]+=1;
+}
+
+int max=0;
+ for(int i=0;i<255;i++){
+     if(i!=32){
+         if(f[i]>f[max]){
+             max=i;
+         }
+     }
+ }
+ printf("The Highest frequency of character '%c' appears number of times : %d \n\n", max, f[max]);
+    return 0;
+}
