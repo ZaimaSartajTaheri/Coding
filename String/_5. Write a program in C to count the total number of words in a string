@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+  char c[100];
+gets(c);
+  int co=0;
+  int i=0;
+ while(c[i]!='\0'){
+    //  printf("%c\n",co);
+     if(c[i]==' '){
+         co++;  
+     }
+ 
+     i++;
+ }
+  printf("%d",co+1);
+    return 0;
+}
