@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+  char c[100];
+scanf("%s",c);
+  int co=0;
+  int i=0;
+ while(c[i]!='\0'){
+     co++;
+     i--;
+ }
+    printf("%d",co);
+    return 0;
+}
