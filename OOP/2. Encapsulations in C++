@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+ class Student
+   {
+      public: //access modifier/specifier 
+      int x;
+      void sayHi(){
+          cout<<"Hi"<<" "<<x<<endl;
+      }
+   };
+   
+int main() {
+  Student rahim;
+ 
+  rahim.x=56;
+  rahim.sayHi();
+  
+    return 0;
+}
