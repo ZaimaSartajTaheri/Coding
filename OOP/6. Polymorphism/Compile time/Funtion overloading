@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class Example{
+    public:
+    int add(int x,int y){
+        cout<<"First one"<<endl;
+        return x+y;
+    }
+    double add(double x,double y){
+        cout<<"Second one"<<endl;
+        return x+y;
+    }
+    void add(char a){
+        cout<<"Hi "<<a<<endl;
+    }
+    
+};
+int main() {
+    Example ex;
+    char x='z';
+    // cout<<ex.add(1,2)<<endl;
+    // cout<<ex.add(1.5,2.4)<<endl;
+    ex.add(x);
+
+    return 0;
+}
