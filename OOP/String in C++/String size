@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+string st="abcdefghij";
+
+return 0;
+}
+//st.size() =>10
+//st.resize(4) =>resizes the string to 4
+//st.clear() => empties the string
+//st.empty() => returns a boolean if a string is empty or not
