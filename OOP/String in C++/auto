@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+string st="abcdefghij";
+
+cout<<"iterator"<<endl;
+for(auto it=st.begin();it!=st.end();it++){
+        cout<<*it<<endl;
+}
+cout<<endl;
+cout<<"reverse iterator"<<endl;
+
+for(auto it=st.rbegin();it!=st.rend();it++){
+        cout<<*it<<endl;
+}
+return 0;
+}
