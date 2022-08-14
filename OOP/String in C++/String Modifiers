@@ -1,0 +1,30 @@
+//assign
+
+string st="abcd"
+st.assign("xyz") => xyz in place of abcd
+
+//append
+string st1="abc"
+string st2="xyz"
+
+st1.append(st2) => abcxyz
+
+//push_back
+
+string st1="abc"
+st1.push_back('x') => abcx
+
+//pop_back
+string st1="abc"
+st1.pop_back() => outputs string deleting the last character => ab
+
+//insert
+string st1="abc"
+st1.insert(1,"xyz") => axyzbc => another string will be insert in position 1 
+
+//erase
+string st1="abcdefghij"
+st1.erase(4,2) => abcdghij => deletes 2 characters form 4 index(including index 4)
+
+//swap
+swap(st1,st2)
