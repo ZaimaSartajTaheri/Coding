@@ -1,0 +1,5 @@
+string st="abcdefghij"
+
+st.front() => st[0] => a
+st.back() => st[st.size()-1] => j
+st.at(4) => e
