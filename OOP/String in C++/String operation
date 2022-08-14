@@ -1,0 +1,25 @@
+//find
+
+string st="aaaabbbaaazz"
+st.find('b') => returns index of first b => 4
+
+st.rfind('b') => returns index of last b => 6
+
+st.find_first_of('b') return index of first b => 4
+
+st.find_last_of('b') return index of last b => 6
+
+st.find_last_of('k') k is not present in the string so it will return idex value outside the string size boundary
+
+st.find_first_not_of('a') => returns the first index where a is not present => 4
+
+st.find_last_not_of('b') => returns the last index where a is not present from reverse => 11
+
+st.find_last_not_of('z') => returns the first index where a is not present => 9
+
+abcdef => substring =>(a, cd, ef)
+       =>subsequence => (acdf)
+       
+       
+ //substring
+ st.substr(2,5) => aabbb => substring from index 2 of length 5 so 2 to 6 index will be substring
