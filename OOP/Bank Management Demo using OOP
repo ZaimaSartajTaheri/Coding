@@ -4,15 +4,16 @@
 4.Add Money to myCash from Bank Account
 
 **Make BankAccount Class**
-class account_holder{
+class Bank Account{
 public:
- string account_number;
+ string account_holder;
  string address;
  int account_number;
 protected:
  int balance;
 private:
  string password;
+ public
  BankAccount(string account_holder,string address,int age,string password){
      this->account_holder=account_holder;
      //this->account_holder means that account_holder in the left side is variable of the class and in the right side the account_holder variable is the parameter of the constructer.
@@ -24,3 +25,62 @@ private:
      
  }
 };
+
+**Create Account**
+#include <bits/stdc++.h>
+using namespace std;
+
+class BankAccount{
+public:
+ string account_holder;
+ string address;
+ int age;
+ int account_number;
+protected:
+ int balance;
+private:
+ string password;
+ public:
+ BankAccount(string account_holder,string address,int age,string password){
+     this->account_holder=account_holder;
+     //this->account_holder means that account_holder in the left side is variable of the class and in the right side the account_holder variable is the parameter of the constructer.
+     this->address=address;
+     this->age=age;
+     this->password=password;
+     this->account_number=rand()%1000000000; //as account_number is integer and rand overflows the interger so to avoid it it has been mod with 10^9 to make the larger value to smaller so that it stays in the range of int.
+     this->balance=0;
+     cout<<"Your account no is "<<account_number<<endl;
+     
+ }
+ int show_balance(string password){
+     if(this->password==password){
+         return this->balance;
+     }
+     else{
+         return -1;
+     }
+ }
+};
+BankAccount* create_account(){
+    string account_holder,password,address;
+    int age;
+    cout<<"Create Account"<<endl;
+    cin>>account_holder>>address>>age>>password;
+    BankAccount *myAccount=new BankAccount(account_holder,address,age,password);
+    return myAccount;
+}
+int main() {
+   
+   BankAccount *myAccount=create_account();
+   if(myAccount->show_balance("abc")==-1){
+       cout<<"Password didn't match"<<endl;
+   }
+   else{
+       cout<<"Your bank balance is: "<<myAccount->show_balance("abc")<<endl;
+   }
+   
+   
+    return 0;
+
+ 
+}
