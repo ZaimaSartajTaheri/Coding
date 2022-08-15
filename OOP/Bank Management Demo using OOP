@@ -3,7 +3,7 @@
 3.Deposit Money From Account
 4.Add Money to myCash from Bank Account
 
-#Make BankAccount Class
+**Make BankAccount Class**
 class account_holder{
 public:
  string account_number;
