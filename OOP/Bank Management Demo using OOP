@@ -1,0 +1,38 @@
+1. Create Account
+2.Add Money to Account
+3.Deposit Money From Account
+4.Add Money to myCash from Bank Account
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class account_holder{
+public:
+ string account_number;
+ string address;
+ int account_number;
+protected:
+ int balance;
+private:
+ string password;
+ BankAccount(string account_holder,string address,int age,string password){
+     this->account_holder=account_holder;
+     //this->account_holder means that account_holder in the left side is variable of the class and in the right side the account_holder variable is the parameter of the constructer.
+     this->address=address;
+     this->age=age;
+     this->password=password;
+     this->account_number=rand()%1000000000; //as account_number is integer and rand overflows the interger so to avoid it it has been mod with 10^9 to make the larger value to smaller so that it stays in the range of int.
+     cout<<"Your account no is "<<
+     
+ }
+};
+
+int main() {
+    Parent pt;
+    Child obj;
+    obj.fun();
+    pt.fun();
+    return 0;
+
+ 
+}
