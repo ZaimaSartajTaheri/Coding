@@ -26,3 +26,4 @@ int main() {
  
 }
 //this is runtime polymorphism because if in compiler time it would have given child output for each function call.
+//in function overriding child would have overrided the parent same named function and used it's
