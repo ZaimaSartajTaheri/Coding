@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Parent{
+    public:
+    int x;
+   void fun(){
+       cout<<"Parent"<<endl;
+   }
+};
+
+class Child: public Parent{
+    public:
+    void fun(){
+        cout<<"Child"<<endl;
+    }
+};
+
+int main() {
+    Parent pt;
+    Child obj;
+    obj.fun();
+    pt.fun();
+    return 0;
+
+ 
+}
+//this is runtime polymorphism because if in compiler time it would have given child output for each function call.
