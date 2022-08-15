@@ -3,9 +3,7 @@
 3.Deposit Money From Account
 4.Add Money to myCash from Bank Account
 
-#include <bits/stdc++.h>
-using namespace std;
-
+#Make BankAccount Class
 class account_holder{
 public:
  string account_number;
@@ -22,17 +20,7 @@ private:
      this->age=age;
      this->password=password;
      this->account_number=rand()%1000000000; //as account_number is integer and rand overflows the interger so to avoid it it has been mod with 10^9 to make the larger value to smaller so that it stays in the range of int.
-     cout<<"Your account no is "<<
+     cout<<"Your account no is "<<account_number<<endl;
      
  }
 };
-
-int main() {
-    Parent pt;
-    Child obj;
-    obj.fun();
-    pt.fun();
-    return 0;
-
- 
-}
